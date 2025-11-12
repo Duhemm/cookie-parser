@@ -148,6 +148,13 @@ jobs:
         fi
         dirname "$(nvm which ${{ matrix.node-version }})" >> "$GITHUB_PATH"
 
+    - name: Setup Develocity for npm
+      uses: gradle/develocity-actions/setup-npm@34dfc49e0c500e7b6f95f5a3ed50c6bd067d274d
+      with:
+        develocity-url: https://dv-helm-standalone-unstable-main.grdev.net
+        develocity-access-key: ${{ secrets.DEVELOCITY_ACCESS_KEY }}
+        develocity-injection-enabled: true
+
     - name: Configure npm
       run: |
         if [[ "$(npm config get package-lock)" == "true" ]]; then
