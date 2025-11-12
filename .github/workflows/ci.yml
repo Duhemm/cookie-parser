@@ -24,10 +24,10 @@ jobs:
 
         include:
         - name: Node.js 18.x
-          node-version: "18.14"
+          node-version: "18.20"
 
         - name: Node.js 19.x
-          node-version: "19.6"
+          node-version: "19.9"
 
         - name: Node.js 20.x
           node-version: "20.12"
