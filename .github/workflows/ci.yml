@@ -61,6 +61,9 @@ jobs:
         develocity-injection-enabled: true
         develocity-npm-agent-url-override: https://develocity-npm-pkgs.grdev.net/gradle-develocity-agent-3.0.0-branch-main-20251113145013.tgz
 
+    - name: check what npm is running
+      run: which npm
+
     - name: Configure npm
       run: npm config set package-lock false
 
