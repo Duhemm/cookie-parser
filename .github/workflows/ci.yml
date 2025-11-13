@@ -54,7 +54,7 @@ jobs:
         dirname "$(nvm which ${{ matrix.node-version }})" >> "$GITHUB_PATH"
 
     - name: Setup Develocity for npm
-      uses: Duhemm/develocity-actions/setup-npm@1459bf5e296acc77062322ac8c275fb121ca3b08
+      uses: Duhemm/develocity-actions/setup-npm@ae7d4c0566fb103f49635f9ac3c8de13c10cc348
       with:
         develocity-url: https://dv-helm-standalone-unstable-main.grdev.net
         develocity-access-key: ${{ secrets.DEVELOCITY_ACCESS_KEY }}
